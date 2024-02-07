@@ -38,13 +38,51 @@ AFRAME.registerComponent("tour", {
       prevoiusXPosition = posX;
 
       // Border Element
+      const borderEl = this.createBorder(position, item.id);
       
       // Thumbnail Element
+      const thumbNail = this.createThumbNail(item);
+      borderEl.appendChild(thumbNail);
      
       // Title Text Element
+      const titleEL = this.createTitleEL(position,item);
+      borderEL.appendChild(titleEL);
       
       this.placesContainer.appendChild(borderEl);
     }
+  },
+  createBorder: function (position, id) {
+    const entityEL = document.createElement("a-entity");
+    entityEL.setattribute("id", id);
+    entityEL.setattribute("visible", true);
+    entityEL.setattribute("geomatry", {
+      primitive: "ring",
+      radiusInner: 9,
+      radiusOuter: 10,
+    });
+        entityEL.setattribute("position", position);
+    entityEL.setattribute("material", {
+      coloor: "#0077CC",
+      opacity: 1,
+
+    createBorder: function (item) {
+    const entityEL = document.createElement("a-entity");
+    entityEL.setattribute("visible", true);
+    entityEL.setattribute("geomatry", {
+      primitive: "circle",
+      radius: 9,
+    });
+      entityEL.setattribute("material", { src: item.url});
+
+      return entityEL;
+
+    createBorder: function (item) {
+    const entityEL = document.createElement("a-entity");
+    entityEL.setattribute("visible", true);
+    entityEL.setattribute("geomatry", {
+      primitive: "circle",
+      radius: 9,
+    });
   },
   
 });
