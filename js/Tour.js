@@ -76,13 +76,20 @@ AFRAME.registerComponent("tour", {
 
       return entityEL;
 
-    createBorder: function (item) {
+    createBorder: function (position, item) {
     const entityEL = document.createElement("a-entity");
-    entityEL.setattribute("visible", true);
-    entityEL.setattribute("geomatry", {
-      primitive: "circle",
-      radius: 9,
+    entityEL.setattribute("text", {
+      font: "exo2bold",
+      align: "center",
+      width: 70,
+      color: "#e65100",
+      value: item.title,
     });
+          const elPosition = position;
+    elPosition.y = -20;
+    entityEl.setAttribute("position", elPosition);
+    entityEl.setAttribute("visible", true);
+    return entityEl;
   },
   
 });
