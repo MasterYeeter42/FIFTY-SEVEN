@@ -9,23 +9,23 @@ AFRAME.registerComponent("tour", {
       {
         id: "taj-mahal",
         title: "Taj Mahal",
-        url: "",
+        url: "KNY v1.jpeg",
       },
       {
         id: "budapest",
         title: "Budapest",
-        url: "./assets/thumbnails/budapest.jpg",
+        url: "kny v2.jpg",
       },
 
       {
         id: "eiffel-tower",
-        title: "Eiffel Tower",
-        url: "./assets/thumbnails/eiffel_tower.jpg",
+        title: "KNY 3",
+        url: "demon-slayer-kimetsu-no-yaiba-vol-3-9781974700547_hr.jpg",
       },
       {
         id: "new-york-city",
-        title: "New York City",
-        url: "./assets/thumbnails/new_york_city.png",
+        title: "KNY 4",
+        url: "download.jpeg",
       },
     ];
     let prevoiusXPosition = -60;
