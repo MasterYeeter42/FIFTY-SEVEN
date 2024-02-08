@@ -9,7 +9,7 @@ AFRAME.registerComponent("tour", {
       {
         id: "taj-mahal",
         title: "Taj Mahal",
-        url: "./assets/thumbnails/taj_mahal.png",
+        url: "",
       },
       {
         id: "budapest",
